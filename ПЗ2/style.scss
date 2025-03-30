@@ -1,0 +1,167 @@
+$breakpoint-mobile: 375px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1440px;
+
+@mixin respond-to($breakpoint) {
+        @media (max-width: $breakpoint) {
+          @content;
+        }
+      }
+body{
+    background-color: #ffffff;
+    margin: 0;
+}
+#content_wrapper{
+    .poppins-regular {
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+    .poppins-semibold {
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        font-style: normal;
+    }
+    .poppins-bold {
+        font-family: "Poppins", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+    }
+    #header_wrapper{
+        &__top{
+            display: flex;
+            background-color: black;
+            color:white;
+            width: 100%;
+            padding: 10px;
+            margin: auto;
+            &__content{
+                &__center{
+                    margin-left: auto;
+                    margin-top: 0.5rem;
+                    margin-bottom: 0.5rem;
+                    &__underline{
+                        text-decoration: underline;
+                    }
+                }
+                &__rightest{
+                    display: flex;
+                    margin-left: auto;
+                    margin-right: 6rem;
+                    margin-top: 0.5rem;
+                    margin-bottom: 0.5rem;
+                    &__image{
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+        }
+        &__bottom{
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin: auto;
+            max-width: 90%;
+            background-color: white;
+            color: black;
+            &__buttons{
+                display: flex;
+                justify-content: space-between;
+                gap:2rem;
+            }
+        }
+    }
+    #footer{
+        display: flex;
+        width: 100%;
+        padding: 10px;
+        &__wrapper{
+            margin-top: 10rem;
+            margin-bottom: 2rem;
+            .container{
+                margin: auto;
+                margin-top: 2rem;
+                max-width: 90%;
+                display: flex;
+                justify-content:space-between;
+                align-items: center;
+                flex-wrap: nowrap;
+                flex-direction: row;
+                @include respond-to($breakpoint-tablet) {
+                    display: flex;
+                    justify-content:center;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    flex-direction: column;
+                }
+                &__textbox{
+                    max-width: 70%;
+                    @include respond-to($breakpoint-tablet) {
+                        max-width: none;
+                    }
+                }
+                p{
+                    margin-left: 0.75rem;
+                    color: #262626;
+                    font-size: 0.82rem;
+                }
+                h1{
+                    line-height: 2rem;
+                    color: #262626;
+                    margin: 0;
+                    @include respond-to($breakpoint-tablet) {
+                        font-size: 1.6rem;
+                        margin-bottom: 2rem;
+                    }
+                }
+                &__button_wrapper{
+                    a{
+                        text-decoration: none;
+                    }
+                    a:hover{
+                        cursor:pointer;
+                    }
+                    @include respond-to($breakpoint-tablet) {
+                        width: 100%;
+                    }
+                    &__button{
+                        border: none;
+                        display: flex;
+                        background-color: #f9b800;
+                        max-width: 15.37rem;
+                        padding: 1.19rem;
+                        padding-right: 1.19rem;
+                        padding-left: 1.19rem;
+                        border-radius: 2.36rem;
+                        @include respond-to($breakpoint-tablet) {
+                            max-width: none;
+                            padding: 0.89rem;
+                        }
+                        span{
+                            margin: auto;
+                            margin-right: 2.73rem;
+                            color: #262626;
+                            font-weight: bolder;
+                            font-size: 1rem;
+                            white-space:nowrap;
+                            @include respond-to($breakpoint-tablet) {
+                                font-size: 0.7rem;
+                            }
+                        }
+                        img{
+                            margin-right: 0;
+                            margin-left: auto;
+                            width: 1.6rem;
+                            object-fit: contain;
+                        }
+                    }
+                }
+                a{
+                    color: #262626;
+                    font-size: 0.82rem;
+                }
+            }
+        }
+    }
+}
