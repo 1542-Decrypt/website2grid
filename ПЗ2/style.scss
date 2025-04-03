@@ -35,6 +35,9 @@ body{
     .bright-text{
         color:#b3b3b3;
     }
+    .dark-text{
+        color:#3c3c3c;
+    }
     .gweentext{
         color:greenyellow;
     }
@@ -604,6 +607,16 @@ body{
                         grid-area: linkedin;
                     }
                 }
+            }
+            &__copyright{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                gap:1rem;
+            }
+            &__Cmark{
+                filter: brightness(30%);
             }
         }
     }

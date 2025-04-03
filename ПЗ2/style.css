@@ -26,6 +26,9 @@ body {
 #content_wrapper .bright-text {
   color: #b3b3b3;
 }
+#content_wrapper .dark-text {
+  color: #3c3c3c;
+}
 #content_wrapper .gweentext {
   color: greenyellow;
 }
@@ -577,4 +580,14 @@ body {
 }
 #content_wrapper #footer__wrapper__content__column .linkedin {
   grid-area: linkedin;
+}
+#content_wrapper #footer__wrapper__copyright {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+#content_wrapper #footer__wrapper__Cmark {
+  filter: brightness(30%);
 }/*# sourceMappingURL=style.css.map */
