@@ -53,6 +53,9 @@ body {
 #content_wrapper #header_wrapper__top__content__center__underline {
   text-decoration: underline;
 }
+#content_wrapper #header_wrapper__top__content__center__link {
+  color: white;
+}
 #content_wrapper #header_wrapper__top__content__rightest {
   display: flex;
   margin-left: auto;
